@@ -33,11 +33,11 @@
         </td>
 
         <td>
-          <%= link_to "Edit", edit_friend_path(friend) %>
+          <%= link_to "Edit", edit_friend_path(friend), class: "btn btn-warning btn-sm" %>
         </td>
 
         <td>
-          <%= link_to "Destroy", friend, data: { turbo_method: :delete } %>
+          <%= link_to "Delete", friend, data: { turbo_method: :delete }, class: "btn btn-danger btn-sm" %>
         </td>
 
       </tr>
