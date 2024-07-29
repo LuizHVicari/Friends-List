@@ -3,27 +3,18 @@
 <div id="friends">
   <table class="table table-striped table-hover table-bordered border-secondary">
     <tr class="table-dark">
-      <th>First Name</th>
-      <th>Last Name</th>
+      <th>Name</th>
       <th>Email</th>
       <th>Phone</th>
       <th>Twitter</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <%# <th>Show</th>
-      <th scope="col">Edit</th>
-      <th scope="col">Delete</th> %>
+      <th>User Id</th>
+      <th colspan="2"></th>
     </tr>
     <tbody>
       <% @friends.each do |friend| %>
       <tr>
         <td>
-          <%= friend.first_name %>
-        </td>
-
-        <td>
-          <%= friend.last_name %>
+          <%= link_to friend.first_name + ' ' + friend.last_name, friend %>
         </td>
 
         <td>
@@ -37,9 +28,8 @@
         <td>
           <%= friend.twitter %>
         </td>
-
         <td>
-          <%= link_to "Show", friend %>
+          <%= friend.user_id %>
         </td>
 
         <td>
